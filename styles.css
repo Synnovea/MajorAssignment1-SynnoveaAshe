@@ -1,19 +1,18 @@
 *{
+    margin:auto;   /*setting the margin to auto fixed my issue with the text moving to the left of the sreen*/
     padding: 0;
     box-sizing: border-box;
 }
 
+
 body{
     background-image: url(images/background2.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+    background-size: 100% 100%;
     margin-left: auto;
     margin-right: auto;
     width: 75%;
 }
-
-
 
 
 .gallery{
@@ -27,7 +26,7 @@ body{
 
 }
 
-
+/*animating the "rotate" mentioned in above animation query*/
 @keyframes rotate {
     0%{
         transform: perspective(3000px) rotateY(0deg);           /*this is definitely pushing the images back further into the page. Think like you are looking at a plane in the distance. Like the Z axis almost*/
@@ -37,6 +36,7 @@ body{
     }
 }
 
+/* creating the 3d affect as the images rotate around my defined midpoint */
 .gallery span{
     position:absolute;
     top: 50px;
@@ -50,6 +50,7 @@ body{
 
 .gallery span img{
     position:absolute;
+    filter: drop-shadow(10px 10px 5px #35302c88);
     top: 0;
     left: 0;
     width: 100%;
@@ -60,6 +61,7 @@ body{
 
 }
 
+/* when the cursor hovers over the gallery images */
 .gallery span:hover img{
     transform: translateY(-50px) scale(1.0);  /*this is what's making the images pop up when I hover over them.*/
 }
@@ -73,8 +75,6 @@ body{
 }
 
 .text2{
-    margin-top: 150px;
-    margin-bottom: 800px;
     font-size: medium;
     font-family: sans-serif;
     font-style: normal;
@@ -83,13 +83,25 @@ body{
     background: rgba(154, 131, 112, 0.75)
 }
 
-h2{
+.h2{
     margin-bottom: 50px;
     text-align:center;
     background: rgba(154, 131, 112, 0.75)
 }
 h1{
     margin-bottom: 0px;
+    text-align:center;
+    background: rgba(154, 131, 112, 0.75)
+}
+
+.text3 {
+    margin-top:50px;
+    text-align:center;
+    background: rgba(154, 131, 112, 0.75)
+}
+
+.other{
+    margin-top: 150px;
     text-align:center;
     background: rgba(154, 131, 112, 0.75)
 }
